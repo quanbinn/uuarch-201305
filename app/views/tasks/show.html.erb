@@ -5,6 +5,15 @@
   <%= @task.name %>
 </p>
 
+<h2>Steps</h2>
+<% @task.steps.each do |step| %>
+<%= render @task.steps %>
+
+<% end %>
+
+<h2>Add a step:</h2>
+<%= render "steps/form" %>
+
 
 <%= link_to 'Edit', edit_task_path(@task) %> |
 <%= link_to 'Back', tasks_path %>

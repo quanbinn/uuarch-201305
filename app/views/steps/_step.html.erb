@@ -1,0 +1,25 @@
+  <p>
+    <b>Name:</b>
+    <%= step.name %>
+  </p>
+ 
+  <p>
+    <b>Description:</b>
+    <%= step.description %>
+  </p>
+
+  <p>
+    <b>Image:</b>
+    <%= step.image_url %>
+  </p>
+
+  <p>
+    <b>File:</b>
+    <%= step.file_url %>
+  </p>
+
+  <p>
+    <%= link_to 'Destroy Step', [step.task, step],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+  </p>

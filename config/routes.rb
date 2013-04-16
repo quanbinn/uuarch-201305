@@ -1,5 +1,9 @@
 Uuarch::Application.routes.draw do
-  resources :tasks
+  get "steps/new"
+
+  resources :tasks do
+    resources :steps
+  end
 
 
   # The priority is based upon order of creation:
