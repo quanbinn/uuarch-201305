@@ -19,6 +19,10 @@
   </p>
 
   <p>
+	<%= link_to 'Edit step',  edit_task_step_path(@task, step) %>
+  </p>
+
+  <p>
     <%= link_to 'Destroy Step', [step.task, step],
                :confirm => 'Are you sure?',
                :method => :delete %>

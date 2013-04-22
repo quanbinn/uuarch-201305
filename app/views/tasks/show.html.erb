@@ -6,10 +6,7 @@
 </p>
 
 <h2>Steps</h2>
-<% @task.steps.each do |step| %>
 <%= render @task.steps %>
-
-<% end %>
 
 <h2>Add a step:</h2>
 <%= render "steps/form" %>
