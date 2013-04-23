@@ -1,3 +1,24 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.task {
+	border-bottom: solid 1px #CCC;
+	padding: 5px 0;
+}
+
+.task p {
+	margin: 4px 0;
+}
+
+.task.hover {
+	background: #FAFAFA;
+}
+
+.task .admin {
+	display: none;
+}
+
+.task.hover .admin {
+	display: inline;
+}
