@@ -5,7 +5,6 @@ Uuarch::Application.routes.draw do
   get "static_pages/help"
   get "static_pages/about"
 
-
   resources :steps
   resources :tasks do
     resources :steps
