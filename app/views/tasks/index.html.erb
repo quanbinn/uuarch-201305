@@ -4,7 +4,8 @@
 
 <% @tasks.each do |task| %>
 <div class="task">
-  <strong><%= task.name %></strong>
+  <strong><%= task.user.full_name %></strong>
+  <p><%= task.name %></p>
   <div class="meta">
     <%= link_to "show", task %>
     <span class="admin">

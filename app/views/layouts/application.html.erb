@@ -12,7 +12,17 @@
 			<div class="container">
 				<a href="#" class="brand"> UUARCH</a>
 				<ul class="nav">
-					<li><%= link_to "All Tasks", tasks_path %></li>
+					<li><%= link_to "学习", tasks_path %></li>
+					</ul>
+                    <ul class="nav pull-right">
+                       <% if user_signed_in? %>
+                             <li><%= link_to current_user.full_name, edit_user_registration_path %></li>
+                             <li><%= link_to "退出", destroy_user_session_path, method: :delete %></li>
+                       <% else %>
+                             <li><%= link_to "注册", new_user_registration_path %></li>
+                             <li><%= link_to "登录", new_user_session_path %></li>
+                      <% end %>
+                    </ul>
 			</div>
 		</div>
 	</div>
