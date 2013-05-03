@@ -1,0 +1,11 @@
+<div class="page-header">
+  <h1><%= @user.full_name %></h1>
+</div>
+
+<% if @tasks %>
+  <% @tasks.each do |task| %>
+    <div class="well">
+      <%= task.name %>
+    </div>
+  <% end %>
+<% end %>
