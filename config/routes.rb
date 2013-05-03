@@ -1,9 +1,15 @@
 Uuarch::Application.routes.draw do
   devise_for :users
 
-  get "static_pages/home"
-  get "static_pages/help"
-  get "static_pages/about"
+  devise_scope :user do
+    get 'register', :to => 'devise/registrations#new', as: :register
+    get 'login', :to => 'devise/sessions#new', as: :login
+    get 'logout', :to => 'devise/sessions#destroy', as: :logout
+  end
+
+  match '/help',    to: 'static_pages#help'
+  match '/about',   to: 'static_pages#about'
+  match '/home', to: 'static_pages#home'
 
   resources :steps
   resources :tasks do
