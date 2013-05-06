@@ -2,8 +2,6 @@ Uuarch::Application.routes.draw do
   
   get "profiles/show"
 
-  get '/:id', to: 'profiles#show'
-
   devise_for :users
 
   devise_scope :user do
@@ -22,6 +20,8 @@ Uuarch::Application.routes.draw do
   end
   
   root :to => 'tasks#index'
+
+  get '/:id', to: 'profiles#show'
 
 
 
